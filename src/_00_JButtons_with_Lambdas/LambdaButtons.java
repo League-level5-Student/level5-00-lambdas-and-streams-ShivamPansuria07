@@ -35,7 +35,7 @@ public class LambdaButtons {
 		window.setVisible(true);
 		window.pack();
 	}
-	
+	//s
 	public static void main(String[] args) {
 		new LambdaButtons();
 	}

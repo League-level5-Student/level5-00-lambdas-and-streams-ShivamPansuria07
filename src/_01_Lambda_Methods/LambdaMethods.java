@@ -26,7 +26,7 @@ public class LambdaMethods {
 				}else {
 					System.out.println(s.charAt(i));
 				}
-				
+				//d
 			}
 		}, "repeat");
 		//4. Call the printCustonMessage method using a lambda so that the String prints with a period in between each character.
