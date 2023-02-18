@@ -3,10 +3,12 @@ package _03_Sorting_With_Streams;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import org.junit.jupiter.api.Test;
@@ -21,11 +23,16 @@ import org.junit.jupiter.api.Test;
 public class StreamSorter {
 
     int[] sortArray(int[] arr) {
-        return null;
+       //  IntStream listStream = Arrays.stream(arr);
+        
+        
+        return  Arrays.stream(arr).sorted().toArray();
     }
 
     List<String> sortList(List<String> list) {
-        return null;
+    	//Stream<String> streamList = list.stream();
+    	 
+        return list.stream().sorted().collect(Collectors.toList());
     }
     
     // =================== DO NOT MODIFY THE CODE BELOW ======================

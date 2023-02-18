@@ -29,6 +29,9 @@ public class LambdaButtons {
 		tellAJoke.addActionListener((ActionEvent e)->{
 			System.out.println("What happened to the frogs car?"+"\n"+"It got toad LOL");
 		});
+		addNumbers.addActionListener((ActionEvent e)->{
+			System.out.println("2+2=4");
+		});
 		//1. Call the addActionListener methods for each button. Use lambdas
 		//   to define to functionality of the buttons.
 		
