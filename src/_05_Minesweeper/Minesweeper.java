@@ -1,7 +1,12 @@
 package _05_Minesweeper;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Random;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 import processing.core.PApplet;
 
@@ -63,6 +68,13 @@ public class Minesweeper extends PApplet {
      * *Note* This can be done using a for loop, but try to do it with Streams.
      */
     void revealAllCells() {
+    	
+
+       
+       // Stream<Cell> streamCell = cells.stream();
+
+        
+        cells.stream().forEach( (i) -> i.flagged=true );
         
     }
     
@@ -76,7 +88,13 @@ public class Minesweeper extends PApplet {
      *  noneMatch() // returns true if no items in the stream match the condition
      */
     boolean checkWin() {
-        return false;
+    if( cells.stream().filter((i) ->i.mine==false).filter((i) ->i.revealed == false).count() > 0) {
+    	 return false;
+     }else {
+    	//this took forever
+    	
+        return true;
+    }
     }
     
     /*
