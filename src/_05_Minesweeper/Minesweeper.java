@@ -104,12 +104,14 @@ public class Minesweeper extends PApplet {
 	 * cells with '-' should be revealed - - - -
 	 */
 	void revealCell(Cell cell) {
-		if (!cell.mine) {
+		if (!cell.mine && !cell.revealed) {
 			cell.revealed=true;
 			if (cell.minesAround == 0) {
 				// Arrays.stream(words).forEach((word) -> System.out.println(word));
 				//getNeighbors(cell).stream().forEach((c) -> c.revealed = true);
-				getNeighbors(cell).stream().forEach((p) -> revealCell(p));
+				getNeighbors(cell)
+				.stream()
+				.forEach((p) -> revealCell(p));
 			}
 		}
 	}
